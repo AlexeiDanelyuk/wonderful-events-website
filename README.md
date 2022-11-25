@@ -14,3 +14,21 @@ It offers the user many options for planning their event:
 All of this functionality and more (such as selecting between French and English as the display language) is packaged in a fun and user-friendly design.
 
 This website is coded using Node.js and Handlebars.
+
+## Get Started Working On Files
+### Add all NPM packages
+`npm i express express-handlebars express-list-routes init jest mysql2 pino pino-caller pino-http pino-pretty supertest validator bcrypt cookie-parser uuid`
+
+### Using Docker container
+
+Create it:
+`docker run -p 4242:3306 --name wonderfulEventsContainer -e MYSQL_ROOT_PASSWORD=tatltuae -e MYSQL_DATABASE=wonderful_events_db -d mysql:5.7`
+
+Run it:
+`docker container exec -it wonderfulEventsContainer`
+
+Enter MySQL:
+`mysql -u root -p`
+
+Enter password:
+`tatltuae`

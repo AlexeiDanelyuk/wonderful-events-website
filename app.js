@@ -5,6 +5,8 @@ const {engine} = require('express-handlebars');
 const bodyParser = require('body-parser')
 const pinohttp = require('pino-http');
 const expressListRoutes = require('express-list-routes');
+var cookieParser = require('cookie-parser');
+app.use(cookieParser());
 
 //logger.info("Creating app");
 
@@ -23,6 +25,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.json());
 app.use(express.static('public'))
+app.use(express.static('views/images')); 
 
 // Http request logs will go to same location as main logger
 // const httpLogger = pinohttp({
@@ -31,7 +34,15 @@ app.use(express.static('public'))
 // app.use(httpLogger);
 
 // Make sure errorController is last!
-const controllers = ['homeController', 'errorController'] 
+const controllers = ['homeController', 'eventsController', 'signUpController', 'guestsController', 'songsController', 'mealsController', 'errorController'] 
+
+app.post('/language', (request, response) => {
+    const lang = request.body.language;
+    if (lang) {
+        response.cookie('language', lang);
+    }
+    response.redirect("/");
+});
 
 // Register routes from all controllers 
 //  (Assumes a flat directory structure and common 'routeRoot' / 'router' export)
