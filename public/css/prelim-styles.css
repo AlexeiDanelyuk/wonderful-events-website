@@ -1,0 +1,91 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #F5CAC3;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #84A59D;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #F7EDE2;
+  text-align: center;
+  padding: 14px 16px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #F6BD60;
+  transition-duration: 0.5s;
+}
+
+p, h1 {
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: bold;
+}
+
+.cheers {
+  margin: 50px, 0px, 0px, 10px;
+  width: 50%;
+  height: 50%;
+  position: center;
+}
+
+.heroImage {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("https://images.pexels.com/photos/949592/pexels-photo-949592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  height: 70%;
+  background-position: center;
+  background-repeat: stretch;
+  position: relative;
+}
+
+.heroContents {
+  padding-top: 50px;
+  text-align: center;
+  color: #F7EDE2;
+}
+
+.container {
+  column-count: 3;
+  column-gap: 40px;
+}
+
+.buttons {
+  margin: 5em;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.buttonsDesign {
+  border: none;
+  color: #F7EDE2;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #F28482;
+  border-radius: 12px;
+}
+
+.buttonsDesign:hover {
+  background-color: #F6BD60;
+  transition-duration: 0.4s;
+}
+
+.footer {
+  background-color: #84A59D;
+  padding: 1px;
+  color: #F7EDE2;
+}
